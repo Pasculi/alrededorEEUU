@@ -1,4 +1,7 @@
 .section-card{
   width: 880px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:17px;
   margin: auto;
 }
