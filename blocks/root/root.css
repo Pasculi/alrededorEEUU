@@ -1,0 +1,7 @@
+:root {
+  --main-bg-color: #000;
+}
+.root{
+  background: var(--main-bg-color);
+  font-family: "Inter";
+}

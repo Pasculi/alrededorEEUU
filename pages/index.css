@@ -1,0 +1,26 @@
+
+@import url(../fonts/fonts.css);
+
+@import url(../vendor/normalize.css);
+
+@import url(../blocks/container/container.css);
+@import url(../blocks/root/root.css);
+
+
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/header.css);
+
+@import url(../blocks/header/__image-profile/header__image-profile-avatar.css);
+
+@import url(../blocks/header/__image-profile/header__image-profile.css);
+
+@import url(../blocks/header/__info-profile/header__info-profile.css);
+
+@import url(../blocks/header/__info-profile/header__info-profile-name.css);
+@import url(../blocks/header/__info-profile/header__info-profile-name-edit.css);
+@import url(../blocks/header/__info-profile/header__info-profile-edit.css);
+@import url(../blocks/header/__info-profile/header__info-profile-button-edit.css);
+
+@import url(../blocks/header/__add-place/header__add-place.css);
+
+@import url(../blocks/header/__info-profile/header__info-profile-activity-job.css)

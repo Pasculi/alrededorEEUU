@@ -1,0 +1,6 @@
+.header__image-profile-avatar{
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
