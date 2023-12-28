@@ -23,4 +23,16 @@
 
 @import url(../blocks/header/__add-place/header__add-place.css);
 
-@import url(../blocks/header/__info-profile/header__info-profile-activity-job.css)
+@import url(../blocks/header/__info-profile/header__info-profile-activity-job.css);
+
+
+@import url(../blocks/card/card.css);
+@import url(../blocks/card/__image/card__image.css);
+@import url(../blocks/card/__image/card__image-bg.css);
+@import url(../blocks/card/__image/card__image-delete.css);
+@import url(../blocks/card/__content/card__content.css);
+@import url(../blocks/card/__content/card__content-container.css);
+@import url(../blocks/card/__content/card__content-like.css);
+@import url(../blocks/card/__content/card__content-name.css);
+
+@import url(../blocks/section-card/section-card.css);

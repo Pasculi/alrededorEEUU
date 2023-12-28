@@ -1,0 +1,8 @@
+.card__content-container{
+  display        : flex;
+  width: 246px;
+  height: 30px;
+flex-direction : row;
+justify-content: space-around;
+align-items    : center;
+}
