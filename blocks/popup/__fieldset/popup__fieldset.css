@@ -1,0 +1,7 @@
+.popup__fieldset {
+  position: relative;
+  width   : 460px;
+  height  : 360px;
+  border  : none;
+  margin  : 141px auto;
+}

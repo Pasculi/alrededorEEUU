@@ -1,0 +1,7 @@
+.header__info-profile-edit{
+  cursor: pointer;
+}
+
+.header__info-profile-edit:hover{
+  opacity: 60%;
+}

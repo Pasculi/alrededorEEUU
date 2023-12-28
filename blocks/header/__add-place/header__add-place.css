@@ -6,4 +6,9 @@
   line-height: 60px;
   position:relative;
   right:-161px ;
+  cursor: pointer;
+}
+
+.header__add-place:hover{
+  opacity: 60%;
 }
