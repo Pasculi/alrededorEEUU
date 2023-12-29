@@ -3,3 +3,11 @@
   height: 18.13px;
   cursor: pointer;
 }
+
+.card__content-like:hover{
+  opacity: 60%;
+}
+
+.card__content-like:active{
+  
+}
