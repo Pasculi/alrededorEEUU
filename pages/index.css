@@ -22,6 +22,7 @@
 @import url(../blocks/header/__info-profile/header__info-profile-button-edit.css);
 
 @import url(../blocks/header/__add-place/header__add-place.css);
+@import url(../blocks/header/__add-place/header__add-place-button.css);
 
 @import url(../blocks/header/__info-profile/header__info-profile-activity-job.css);
 

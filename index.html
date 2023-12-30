@@ -11,7 +11,7 @@
 <body class="root">
   <div class="container">
     <div class="header__logo">
-      <img src="./img/logo.svg" alt="" srcset="">
+      <img src="./img/logo.svg" alt="Logo">
     </div>
     <header class="header">
       <div class="header__image-profile">
@@ -20,8 +20,8 @@
       <div class="header__info-profile">
         <div class="header__info-profile-name">
           <p class="header__info-profile-name-edit">Jacques Cousteau</p>
-          <div class="header__info-profile-edit">
-            <img class="header__info-profile-button-edit" src="./img/vector__edit.png" alt="Editar">
+          <div class="header__info-profile-edit" name="button-edit">
+            <img class="header__info-profile-button-edit" name="button-edit" src="./img/vector__edit.png" alt="Editar">
 
           </div>
         </div>
@@ -29,8 +29,8 @@
           <p class="header__info-profile-activity-job">Explorer</p>
         </div>
       </div>
-      <div class="header__add-place">
-        <img src="./img/vector__add.png" alt="Añadir">
+      <div class="header__add-place" name="button-add">
+        <img class="header__add-place-button" src="./img/vector__add.png" name="button-add" alt="Añadir">
       </div>
     </header>
     <section class="section-card">
@@ -126,9 +126,9 @@
       </p>
     </footer>
 
-    <div class="popup">
+    <div class="popup popup-profile">
       <fieldset class="popup__fieldset">
-        <img class="popup__close" src="./img/vector__close.png" alt="popup__close">
+        <img class="popup__close popup__close-profile" src="./img/vector__close.png" alt="popup__close">
         <form action="" class="form">
           <p class="form__titulo">Edit Profile</p>
           <input type="text" class="form__input form__input-name" placeholder="Jacques Cousteau">
@@ -136,10 +136,10 @@
           <button class="form__submit" type="submit">Save</button>
         </form>
       </fieldset>
-    </div>
-    <div class="popup">
+    </div> 
+    <div class="popup popup-place">
       <fieldset class="popup__fieldset">
-        <img class="popup__close" src="./img/vector__close.png" alt="popup__close">
+        <img class="popup__close popup__close-place" src="./img/vector__close.png" alt="popup__close">
         <form action="" class="form">
           <p class="form__titulo">Add Place</p>
           <input type="text" class="form__input form__input-name" placeholder="Title">
@@ -150,6 +150,7 @@
     </div>
 
   </div>
+  <script type="module" src="./pages/index.js"></script>
 </body>
 
 </html>

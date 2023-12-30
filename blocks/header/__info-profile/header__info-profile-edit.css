@@ -1,5 +1,6 @@
 .header__info-profile-edit{
   cursor: pointer;
+  color:transparent;
 }
 
 .header__info-profile-edit:hover{

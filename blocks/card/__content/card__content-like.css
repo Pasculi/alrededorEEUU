@@ -2,12 +2,14 @@
   width: 20.76px;
   height: 18.13px;
   cursor: pointer;
+  transition:all .3s;
 }
 
 .card__content-like:hover{
+  transform:scale(1);
   opacity: 60%;
 }
 
 .card__content-like:active{
-  
+
 }
