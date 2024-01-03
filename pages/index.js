@@ -29,6 +29,8 @@ const editProfile = document.querySelector('.header__info-profile-edit');
 const popupAdd = document.querySelector('.popup-profile');
 const closePopupProfile = document.querySelector('.popup__close-profile');
 
+
+
 editProfile.addEventListener('click', () => {
     popupAdd.classList.add('popup-show');
 })
@@ -50,13 +52,11 @@ closePopupPlace.addEventListener('click', () => {
     popupPlace.classList.remove('popup-show')
 })
 
-function setEventListeners() {
-    const formInputs = Array.from(document.querySelectorAll('.form__input'));
-    console.log(formInputs)
-    formInputs.forEach((elementInput) => {
-        elementInput.addEventListener("input", (e) => {
-            console.log(e.target.value)
-        })
-    })
+
+
+document.querySelector('body').addEventListener('click', (e)=>{
+
+if (e.target.matches('.form__input')){
+    console.log("Esto es un input")
 }
-setEventListeners()
+})
