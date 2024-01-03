@@ -1,0 +1,7 @@
+.popup__image-picture{
+  width      : 600px;
+  height: fit-content;
+  display: block;
+  margin-top: 45px;
+  object-fit: cover;
+}

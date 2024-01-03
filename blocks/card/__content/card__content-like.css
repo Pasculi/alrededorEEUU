@@ -6,10 +6,9 @@
 }
 
 .card__content-like:hover{
-  transform:scale(1);
   opacity: 60%;
 }
 
 .card__content-like:active{
-
+  
 }
