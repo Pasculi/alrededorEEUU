@@ -1,7 +1,42 @@
 import { initialCards } from '../utils/constants.js'
 
+/*const addPlace = document.querySelector('.header__add-place');
+const closePopupPlace = document.querySelector('.popup__close-place'); */
 
-//Seleccionamos el dection donde colocar las card
+
+/* Open Popup */
+
+
+const popupAdd = document.querySelector('.popup-profile');
+const popupPlace = document.querySelector('.popup-place')
+const popupImage = document.querySelector('.popup__image-container')
+const urlPlace = document.querySelector('.popup__image-picture')
+const namePlace = document.querySelector('.popup__image-legend')
+
+document.addEventListener('click', (e)=>{
+    if(e.target.name === 'button-edit'){
+        console.log(e.target)
+        popupAdd.classList.add('popup-show')
+    }else if(e.target.name === 'button-add'){
+        console.log(e.target)
+        popupPlace.classList.add('popup-show')
+    }else if(e.target.name === 'open__image'){
+        console.log(e.target)
+        /* popupImage.classList.add('popup-show') */
+        popupImage.classList.add('popup__image-container-show');
+        urlPlace.src = e.target.src;
+        namePlace.textContent = e.target.alt;
+        
+    }else if(e.target.name === 'popup__close'){
+        e.target.parentElement.parentElement.classList.remove('popup-show', 'popup__image-container-show')
+    }
+})
+
+/* Close Popup */
+
+
+
+//Seleccionamos el section donde colocar las card
 const section = document.querySelector('.section-card')
 
 //Llamada a la función para crear las card Inicial
@@ -24,39 +59,3 @@ function templateContent(cards) {
     const editProfileJob = document.querySelector('.form__input-about');
 
 } */
-
-const editProfile = document.querySelector('.header__info-profile-edit');
-const popupAdd = document.querySelector('.popup-profile');
-const closePopupProfile = document.querySelector('.popup__close-profile');
-
-
-
-editProfile.addEventListener('click', () => {
-    popupAdd.classList.add('popup-show');
-})
-
-closePopupProfile.addEventListener('click', () => {
-    popupAdd.classList.remove('popup-show');
-})
-
-const popupPlace = document.querySelector('.popup-place')
-const addPlace = document.querySelector('.header__add-place');
-const closePopupPlace = document.querySelector('.popup__close-place');
-
-addPlace.addEventListener('click', () => {
-    popupPlace.classList.add('popup-show')
-
-})
-
-closePopupPlace.addEventListener('click', () => {
-    popupPlace.classList.remove('popup-show')
-})
-
-
-
-document.querySelector('body').addEventListener('click', (e)=>{
-
-if (e.target.matches('.form__input')){
-    console.log("Esto es un input")
-}
-})

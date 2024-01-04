@@ -42,7 +42,7 @@
     <template class="template">
       <div class="card">
         <div class="card__image">
-          <img class="card__image-bg" src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg" alt="" >
+          <img class="card__image-bg" name="open__image" src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg" alt="" >
           <img class="card__image-delete" src="./img/vector__eliminar.png" alt="">
         </div>
         <div class="card__content">
@@ -60,9 +60,11 @@
       </p>
     </footer>
 
-    <div class="popup popup-profile">
+    <!-- Elementos Popup -->
+
+    <div class="popup popup-profile" id="">
       <fieldset class="popup__fieldset">
-        <img class="popup__close popup__close-profile" src="./img/vector__close.png" alt="popup__close">
+        <img class="popup__close popup__close-profile" src="./img/vector__close.png" alt="popup__close" name="popup__close">
         <form action="" class="form">
           <p class="form__titulo">Edit Profile</p>
           <input type="text" class="form__input form__input-name" placeholder="Jacques Cousteau" autofocus>
@@ -73,7 +75,7 @@
     </div> 
     <div class="popup popup-place">
       <fieldset class="popup__fieldset">
-        <img class="popup__close popup__close-place" src="./img/vector__close.png" alt="popup__close">
+        <img class="popup__close popup__close-place" src="./img/vector__close.png" alt="popup__close" name="popup__close">
         <form action="" class="form">
           <p class="form__titulo">Add Place</p>
           <input type="text" class="form__input form__input-name" placeholder="Title" autofocus>
@@ -83,11 +85,11 @@
       </fieldset>
     </div>
 
-    <div class="popup__image-container popup__image-container-show">
+    <div class="popup__image-container">
       <fieldset class="popup__image">
-        <img class="popup__close popup__close-image" src="./img/vector__close.png" alt="popup__close">
+        <img class="popup__close" name="popup__close" src="./img/vector__close.png" alt="popup__close">
       <figure class="popup__imagen">
-        <img class="popup__image-picture"
+        <img class="popup__image-picture" 
           src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg"
           alt="Valle de Yosemite">
         <figcaption class="popup__image-legend">Valle de Yosemite</figcaption>
