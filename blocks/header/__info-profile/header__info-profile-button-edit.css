@@ -1,8 +1,5 @@
-.header__info-profile-edit{
-  border: 1px solid #fff;
-  width: 24px;
-  height: 24px;
+.header__info-profile-button-edit{
   text-align: center;
   line-height: 24px;
-
+  padding:8px
 }

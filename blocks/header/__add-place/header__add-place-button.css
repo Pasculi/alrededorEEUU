@@ -1,3 +1,5 @@
 .header__add-place-button{
-    color:transparent;
+    padding:13px 65px;
+    cursor: pointer;
+
 }

@@ -20,20 +20,20 @@ document.addEventListener('click', (e)=>{
     }else if(e.target.name === 'button-add'){
         console.log(e.target)
         popupPlace.classList.add('popup-show')
+    }else if(e.target.name === 'button-container'){
+        console.log(e.target)
+        popupPlace.classList.add('popup-show')
     }else if(e.target.name === 'open__image'){
         console.log(e.target)
         /* popupImage.classList.add('popup-show') */
         popupImage.classList.add('popup__image-container-show');
         urlPlace.src = e.target.src;
         namePlace.textContent = e.target.alt;
-        
+        /* Close Popup */
     }else if(e.target.name === 'popup__close'){
         e.target.parentElement.parentElement.classList.remove('popup-show', 'popup__image-container-show')
     }
 })
-
-/* Close Popup */
-
 
 
 //Seleccionamos el section donde colocar las card
@@ -54,8 +54,4 @@ function templateContent(cards) {
     })
 }
 
-/* function editarProfile() {
-    const editProfileName = document.querySelector('.form__input-name');
-    const editProfileJob = document.querySelector('.form__input-about');
 
-} */

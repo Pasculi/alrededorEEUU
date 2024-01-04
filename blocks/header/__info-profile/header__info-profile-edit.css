@@ -1,6 +1,12 @@
 .header__info-profile-edit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   color:transparent;
+  border: 1px solid #fff;
+  width: 24px;
+  height: 24px;
 }
 
 .header__info-profile-edit:hover{
