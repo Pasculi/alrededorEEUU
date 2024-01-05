@@ -13,23 +13,38 @@ const section = document.querySelector('.section-card');
 
 
 /* Implementación con delegación de eventos */
-document.addEventListener('click', (e)=>{
-    if(e.target.name === 'button-edit'){
+document.addEventListener('click', (e) => {
+    if (e.target.name === 'button-edit') {
         popupAdd.classList.add('popup-show')
-    }else if(e.target.name === 'button-add'){
+    } else if (e.target.name === 'button-add') {
         popupPlace.classList.add('popup-show')
-    }else if(e.target.name === 'button-container'){
+    } else if (e.target.name === 'button-container') {
         popupPlace.classList.add('popup-show')
-    }else if(e.target.name === 'open__image'){
+    } else if (e.target.name === 'open__image') {
         /* popupImage.classList.add('popup-show') */
         popupImage.classList.add('popup__image-container-show');
         urlPlace.src = e.target.src;
         namePlace.textContent = e.target.alt;
         /* Close Popup */
-    }else if(e.target.name === 'popup__close'){
+    } else if (e.target.name === 'popup__close') {
         e.target.parentElement.parentElement.classList.remove('popup-show', 'popup__image-container-show')
-    }else if(e.target.className === ('card__image-delete')){
+    } else if (e.target.className === ('card__image-delete')) {
         console.log(e.target.parentElement.parentElement.remove());
+    } else if (e.target.className === 'card__content-like') {
+        e.target.classList.toggle('card__content-like-active')
+    }
+})
+
+/* Cargar Card Nueva */
+
+document.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
+
+document.addEventListener('input', (e) => {
+    console.log(e.target.value)
+    if (e.target.className === 'form__input-name') {
+        
     }
 })
 
@@ -40,7 +55,6 @@ function templateContent(cards) {
     const template = document.querySelector('.template').content;
     cards.forEach((elementCard) => {
         const card = template.querySelector('.card').cloneNode(true);
-
         card.querySelector('.card__image-bg').src = elementCard.link;
         card.querySelector('.card__image-bg').alt = elementCard.name;
         card.querySelector('.card__content-name').textContent = elementCard.name;

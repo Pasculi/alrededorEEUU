@@ -9,6 +9,6 @@
   opacity: 60%;
 }
 
-.card__content-like:active{
-  
+.card__content-like-active{
+  background-image: url(../../../img/vector__like-black.svg);
 }
