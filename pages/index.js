@@ -42,9 +42,12 @@ document.addEventListener('submit', (e) => {
 })
 
 document.addEventListener('input', (e) => {
-    console.log(e.target.value)
-    if (e.target.className === 'form__input-name') {
-        
+    if (e.target.name === 'form__input-name') {
+        const name = e.target.value;
+        console.log(name)
+    } else if (e.target.name === 'form__input-about') {
+        const job = e.target.value;
+        console.log(job)
     }
 })
 
