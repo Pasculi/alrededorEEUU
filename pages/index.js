@@ -1,30 +1,26 @@
 import { initialCards } from '../utils/constants.js'
 
-/*const addPlace = document.querySelector('.header__add-place');
-const closePopupPlace = document.querySelector('.popup__close-place'); */
-
-
 /* Open Popup */
 
-
 const popupAdd = document.querySelector('.popup-profile');
-const popupPlace = document.querySelector('.popup-place')
-const popupImage = document.querySelector('.popup__image-container')
-const urlPlace = document.querySelector('.popup__image-picture')
-const namePlace = document.querySelector('.popup__image-legend')
+const popupPlace = document.querySelector('.popup-place');
+const popupImage = document.querySelector('.popup__image-container');
+const urlPlace = document.querySelector('.popup__image-picture');
+const namePlace = document.querySelector('.popup__image-legend');
+//Seleccionamos el section donde colocar las card
+const section = document.querySelector('.section-card');
+//Eliminar card
 
+
+/* Implementación con delegación de eventos */
 document.addEventListener('click', (e)=>{
     if(e.target.name === 'button-edit'){
-        console.log(e.target)
         popupAdd.classList.add('popup-show')
     }else if(e.target.name === 'button-add'){
-        console.log(e.target)
         popupPlace.classList.add('popup-show')
     }else if(e.target.name === 'button-container'){
-        console.log(e.target)
         popupPlace.classList.add('popup-show')
     }else if(e.target.name === 'open__image'){
-        console.log(e.target)
         /* popupImage.classList.add('popup-show') */
         popupImage.classList.add('popup__image-container-show');
         urlPlace.src = e.target.src;
@@ -32,12 +28,10 @@ document.addEventListener('click', (e)=>{
         /* Close Popup */
     }else if(e.target.name === 'popup__close'){
         e.target.parentElement.parentElement.classList.remove('popup-show', 'popup__image-container-show')
+    }else if(e.target.className === ('card__image-delete')){
+        console.log(e.target.parentElement.parentElement.remove());
     }
 })
-
-
-//Seleccionamos el section donde colocar las card
-const section = document.querySelector('.section-card')
 
 //Llamada a la función para crear las card Inicial
 templateContent(initialCards)
