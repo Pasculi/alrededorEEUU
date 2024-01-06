@@ -3,6 +3,6 @@
   width: 246px;
   height: 30px;
 flex-direction : row;
-justify-content: space-around;
+justify-content: space-between;
 align-items    : center;
 }

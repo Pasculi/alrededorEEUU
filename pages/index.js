@@ -31,6 +31,7 @@ document.addEventListener('click', (e) => {
     } else if (e.target.className === ('card__image-delete')) {
         console.log(e.target.parentElement.parentElement.remove());
     } else if (e.target.className === 'card__content-like') {
+        e.target.classList.toggle('card__content-like')
         e.target.classList.toggle('card__content-like-active')
     }
 })
