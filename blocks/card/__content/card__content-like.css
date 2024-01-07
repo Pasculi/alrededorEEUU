@@ -7,6 +7,7 @@
 }
 
 .card__content-like:hover{
+  transform:scale(1.2);
   opacity: 60%;
 }
 
@@ -14,4 +15,12 @@
   width: 20.76px;
   height: 18.13px;
   cursor: pointer;
+  background-image: url(../../../img/vector__like-black.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition:all .3s;
+}
+.card__content-like-active:hover{
+  transform:scale(1.2);
 }

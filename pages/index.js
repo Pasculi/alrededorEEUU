@@ -2,39 +2,57 @@ import { initialCards } from '../utils/constants.js'
 
 /* Open Popup */
 
+const header = document.querySelector('.header');
+
 const popupAdd = document.querySelector('.popup-profile');
 const popupPlace = document.querySelector('.popup-place');
 const popupImage = document.querySelector('.popup__image-container');
-const urlPlace = document.querySelector('.popup__image-picture');
-const namePlace = document.querySelector('.popup__image-legend');
+
+document.addEventListener('click', (e)=>{
+    if (e.target.name === 'popup__close') {
+
+        e.target.parentElement.parentElement.classList.remove('popup-show', 'popup__image-container-show');
+    }
+})
+
 //Seleccionamos el section donde colocar las card
 const section = document.querySelector('.section-card');
 //Eliminar card
-
-
-/* Implementación con delegación de eventos */
-document.addEventListener('click', (e) => {
+header.addEventListener('click', (e) => {
     if (e.target.name === 'button-edit') {
         popupAdd.classList.add('popup-show')
     } else if (e.target.name === 'button-add') {
         popupPlace.classList.add('popup-show')
     } else if (e.target.name === 'button-container') {
         popupPlace.classList.add('popup-show')
+    } 
+
+})
+
+
+
+/* Implementación con delegación de eventos */
+section.addEventListener('click', (e) => {
+     if (e.target.className === ('card__image-delete')) {
+        console.log(e.target.parentElement.parentElement.remove());
+        
     } else if (e.target.name === 'open__image') {
         /* popupImage.classList.add('popup-show') */
         popupImage.classList.add('popup__image-container-show');
-        urlPlace.src = e.target.src;
-        namePlace.textContent = e.target.alt;
         /* Close Popup */
-    } else if (e.target.name === 'popup__close') {
-        e.target.parentElement.parentElement.classList.remove('popup-show', 'popup__image-container-show')
-    } else if (e.target.className === ('card__image-delete')) {
-        console.log(e.target.parentElement.parentElement.remove());
     } else if (e.target.className === 'card__content-like') {
-        e.target.classList.toggle('card__content-like')
-        e.target.classList.toggle('card__content-like-active')
+        e.target.classList.remove('card__content-like');
+        e.target.classList.add('card__content-like-active');
+        console.log(e.target.classList)
+
+    } else if (e.target.className === 'card__content-like-active') {
+        e.target.classList.add('card__content-like');
+        e.target.classList.remove('card__content-like-active');
+        console.log(e.target.classList)
     }
 })
+
+
 
 /* Cargar Card Nueva */
 
