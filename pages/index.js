@@ -9,8 +9,7 @@ const popupPlace = document.querySelector('.popup-place');
 const popupImage = document.querySelector('.popup__image-container');
 
 document.addEventListener('click', (e)=>{
-    if (e.target.name === 'popup__close') {
-
+    if (e.target.name === 'popup__close' ){
         e.target.parentElement.parentElement.classList.remove('popup-show', 'popup__image-container-show');
     }
 })
@@ -58,15 +57,26 @@ section.addEventListener('click', (e) => {
 
 document.addEventListener('submit', (e) => {
     e.preventDefault();
+    document.addEventListener('click', (e)=>{
+        if (e.target.name === 'form__submit' ){
+            e.target.parentElement.parentElement.parentElement.classList.remove('popup-show', 'popup__image-container-show');
+        }
+    })
 })
+
+
+const nameProfile = document.querySelector('.header__info-profile-name-edit');
+
+const jobProfile = document.querySelector('.header__info-profile-activity-job');
 
 document.addEventListener('input', (e) => {
     if (e.target.name === 'form__input-name') {
-        const name = e.target.value;
-        console.log(name)
+        nameProfile.textContent = e.target.value;
+        console.log(nameProfile)
+        
     } else if (e.target.name === 'form__input-about') {
-        const job = e.target.value;
-        console.log(job)
+        jobProfile.textContent = e.target.value;
+        console.log(jobProfile)
     }
 })
 
