@@ -29,22 +29,23 @@
           <p class="header__info-profile-activity-job">Explorer</p>
         </div>
       </div>
-      <div class="header__add-place" >
-        <div class="header__add-place__container" name="button" >
+      <div class="header__add-place">
+        <div class="header__add-place__container" name="button">
           <img class="header__add-place-button" name="button-add" src="./img/vector__add.png" alt="Añadir">
         </div>
       </div>
     </header>
     <section class="section-card">
-      
+
       <!-- Aqui se van a colocar las Cards -->
-      
+
     </section>
 
     <template class="template">
       <div class="card">
         <div class="card__image">
-          <img class="card__image-bg" name="open__image" src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg" alt="" >
+          <img class="card__image-bg" name="open__image"
+            src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg" alt="">
           <img class="card__image-delete" src="./img/vector__eliminar.png" alt="">
         </div>
         <div class="card__content">
@@ -66,22 +67,25 @@
 
     <div class="popup popup-profile" id="">
       <fieldset class="popup__fieldset">
-        <img class="popup__close popup__close-profile" src="./img/vector__close.png" alt="popup__close" name="popup__close">
-        <form action="" class="form" id="form-profile">
+        <img class="popup__close popup__close-profile" src="./img/vector__close.png" alt="popup__close"
+          name="popup__close">
+        <form action="" class="form" name="formPerfil" id="form-profile" novalidate>
           <p class="form__titulo">Edit Profile</p>
-          <input type="text" class="form__input form__input-name" placeholder="Jacques Cousteau" autofocus id="form__input-name">
-          <input type="text" class="form__input form__input-about" placeholder="Explorador" id="form__input-about">
+          <input type="text" name="nombrePerfil" class="form__input form__input-name" placeholder="Jacques Cousteau" autofocus
+            id="form__input-name" minlength="2" maxlength="40" required>
+          <input type="text" class="form__input form__input-about" placeholder="Explorador" id="form__input-about"  minlength="2" maxlength="200" required>
           <button class="form__submit" id="form__submit-profile" type="submit">Save</button>
         </form>
       </fieldset>
-    </div> 
+    </div>
     <div class="popup popup-place">
       <fieldset class="popup__fieldset">
-        <img class="popup__close popup__close-place" src="./img/vector__close.png" alt="popup__close" name="popup__close">
-        <form action="" class="form" id="form-about">
+        <img class="popup__close popup__close-place" src="./img/vector__close.png" alt="popup__close"
+          name="popup__close">
+        <form action="" class="form" name="formPlace" id="form-place" novalidate>
           <p class="form__titulo">Add Place</p>
-          <input type="text" class="form__input" id="form__input-name-url" placeholder="Title" autofocus>
-          <input type="url" class="form__input form__input-url" id="form__input-url" placeholder="Url">
+          <input type="text" class="form__input" id="form__input-name-url" placeholder="Title" autofocus  minlength="2" maxlength="30" required>
+          <input type="url" class="form__input form__input-url" id="form__input-url" placeholder="Url" required>
           <button class="form__submit" id="form__submit-place" id="submit-place" type="submit">Add</button>
         </form>
       </fieldset>
@@ -89,20 +93,20 @@
 
     <div class="popup__image-container">
       <fieldset class="popup__image">
-        <img class="popup__close" name="popup__close" src="./img/vector__close.png" alt="popup__close">
-      <figure class="popup__imagen">
-        <img class="popup__image-picture" 
-          src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg"
-          alt="Valle de Yosemite">
-        <figcaption class="popup__image-legend">Valle de Yosemite</figcaption>
+        <img class="popup__close" id="popup__close-image" src="./img/vector__close.png" alt="popup__close">
+        <figure class="popup__imagen">
+          <img class="popup__image-picture"
+            src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg"
+            alt="Valle de Yosemite">
+          <figcaption class="popup__image-legend">Valle de Yosemite</figcaption>
       </fieldset>
     </div>
 
-    
+
 
   </div>
 
-  
+
   <script type="module" src="./pages/index2.js"></script>
 </body>
 
