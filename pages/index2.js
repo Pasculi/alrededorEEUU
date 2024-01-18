@@ -1,22 +1,28 @@
 import { initialCards } from "../utils/constants.js";
 
-/* console.log(initialCards) */
+console.log(initialCards)
+
+
+console.log(initialCards[0].name)
+
 //Seleccionamos el section donde colocar las card
 const section = document.querySelector('.section-card');
 //Llamada a la función para crear las card Inicial
-render(initialCards)
+
 //Funcion que realiza una clonación del Template Crad, y las crea
-function render(cards) {
-    cards.forEach((elementCard) => {
+function render(name, link) {    
         const template = document.querySelector('.template').content;
         const card = template.querySelector('.card').cloneNode(true);
-        card.querySelector('.card__image-bg').src = elementCard.link;
-        card.querySelector('.card__image-bg').alt = elementCard.name;
-        card.querySelector('.card__content-name').textContent = elementCard.name;
+        card.querySelector('.card__image-bg').src = link;
+        card.querySelector('.card__image-bg').alt = name;
+        card.querySelector('.card__content-name').textContent = name;
         section.append(card)
-    })
+    
 }
-
+initialCards.forEach((element) => {    
+        render(element.name, element.link)
+    
+})
 const openPopupProfile = document.querySelector('.popup-profile');
 const buttonEditProfile = document.querySelector('.header__info-profile-button-edit');
 const addPlace = document.querySelector('.header__add-place-button')
@@ -107,7 +113,6 @@ section.addEventListener('click', evt => {
 //Evitar el envio de formularios
 
 const formProfile = document.querySelector('#form-profile');
-const formPlace = document.querySelector('#form-place');
 formProfile.addEventListener('submit', evt => {
     evt.preventDefault();
     let nameProfile = document.querySelector('.header__info-profile-name-edit');
@@ -116,17 +121,8 @@ formProfile.addEventListener('submit', evt => {
     const inputJobProfile = document.querySelector('.form__input-about')
     nameProfile.textContent = inputProfile.value;
     jobProfile.textContent = inputJobProfile.value;
-
+    
     togglePopup(openPopupProfile)
 })
 
-
-function formulario(selector) {
-    console.log(selector.elements)
-}
-
-
-
-formulario(formProfile)
-
-formulario(formPlace)
+const formPlace = document.querySelector('#form-place');

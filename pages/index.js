@@ -32,7 +32,7 @@ header.addEventListener('click', (e) => {
 /* Implementación con delegación de eventos */
 section.addEventListener('click', (e) => {
      if (e.target.className === ('card__image-delete')) {
-        console.log(e.target.parentElement.parentElement.remove());
+       e.target.parentElement.parentElement.remove();
         
     } else if (e.target.name === 'open__image') {
         const image = document.querySelector('.popup__image-picture');
@@ -44,18 +44,16 @@ section.addEventListener('click', (e) => {
     } else if (e.target.className === 'card__content-like') {
         e.target.classList.remove('card__content-like');
         e.target.classList.add('card__content-like-active');
-        console.log(e.target.classList)
 
     } else if (e.target.className === 'card__content-like-active') {
         e.target.classList.add('card__content-like');
         e.target.classList.remove('card__content-like-active');
-        console.log(e.target.classList)
     }
 })
 
 
 
-/* Cargar Card Nueva */
+
 
 document.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -68,19 +66,23 @@ document.addEventListener('submit', (e) => {
 
 
 const nameProfile = document.querySelector('.header__info-profile-name-edit');
-
 const jobProfile = document.querySelector('.header__info-profile-activity-job');
 
-document.addEventListener('input', (e) => {
-    if (e.target.name === 'form__input-name') {
-        nameProfile.textContent = e.target.value;
-        console.log(nameProfile)
-        
-    } else if (e.target.name === 'form__input-about') {
-        jobProfile.textContent = e.target.value;
-        console.log(jobProfile)
-    }
-})
+function addProfile(){
+    document.addEventListener('input', (e) => {
+        console.log(e.target)
+        if (e.target.id === 'form__input-name') {
+            nameProfile.textContent = e.target.value;
+            console.log(nameProfile)
+            
+        } else if (e.target.id === 'form__input-about') {
+            jobProfile.textContent = e.target.value;
+            console.log(jobProfile)
+        }
+    })
+    
+}
+addProfile()//Revisar
 
 
 //Llamada a la función para crear las card Inicial
