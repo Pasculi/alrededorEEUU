@@ -71,12 +71,17 @@
           name="popup__close">
         <form action="" class="form" name="formPerfil" id="form-profile" novalidate>
           <p class="form__titulo">Edit Profile</p>
-          <input type="text" name="nombrePerfil" class="form__input form__input-name" id="form__input-name" value="Jacques Cousteau" autofocus
-            id="form__input-name" minlength="2" maxlength="40" required>
-            <span class="form__input-name-error"></span>
-          <input type="text" class="form__input form__input-about" value="Explorador" id="form__input-about"  minlength="2" maxlength="200" required>
-          <span class="form__input-about-error"></span>
-          <button class="form__submit" id="form__submit-profile" type="submit">Save</button>
+          <div class="from__input__group">
+            <input type="text" name="nombrePerfil" class="form__input form__input-name" id="form__input-name"
+              placeholder="Jacques Cousteau" autofocus minlength="2" maxlength="40" required>
+            <span class="form__input-error form__input-name-error"></span>
+          </div>
+          <div class="from__input__group">
+            <input type="text" class="form__input form__input-about" placeholder="Explorador" id="form__input-about"
+              minlength="2" maxlength="200" required>
+            <span class="form__input-error form__input-about-error"></span>
+          </div>
+          <button class="form__submit " id="form__submit-profile" type="submit">Save</button>
         </form>
       </fieldset>
     </div>
@@ -86,10 +91,15 @@
           name="popup__close">
         <form action="" class="form" name="formPlace" id="form-place" novalidate>
           <p class="form__titulo">Add Place</p>
-          <input type="text" class="form__input" id="form__input-name-url" value="Title" autofocus  minlength="2" maxlength="30" required>
-          <span class="form__input-name-url-error"></span>
-          <input type="url" class="form__input form__input-url" id="form__input-url" value="Url" required>
-          <span class="form__input-url-error"></span>
+          <div class="from__input__group">
+            <input type="text" class="form__input" id="form__input-name-url" placeholder="Title" autofocus minlength="2"
+              maxlength="30" required>
+            <span class="form__input-error form__input-name-url-error"></span>
+          </div>
+          <div class="from__input__group">
+            <input type="url" class="form__input form__input-url" id="form__input-url" placeholder="Url" required>
+            <span class="form__input-error form__input-url-error"></span>
+          </div>
           <button class="form__submit" id="form__submit-place" id="submit-place" type="submit">Add</button>
         </form>
       </fieldset>

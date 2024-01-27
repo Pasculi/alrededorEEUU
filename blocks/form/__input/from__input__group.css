@@ -1,0 +1,4 @@
+.from__input__group{
+  display: flex;
+  flex-direction: column;
+}

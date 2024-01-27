@@ -11,7 +11,7 @@ function render(name, link) {
   card.querySelector('.card__image-bg').src = link;
   card.querySelector('.card__image-bg').alt = name;
   card.querySelector('.card__content-name').textContent = name;
- 
+
   return card;
 }
 initialCards.forEach((element) => {
@@ -23,7 +23,6 @@ const openPopupProfile = document.querySelector('.popup-profile');
 const buttonEditProfile = document.querySelector('.header__info-profile-button-edit');
 const addPlace = document.querySelector('.header__add-place-button')
 const popupAddPlace = document.querySelector('.popup-place')
-
 const closePopupProfile = document.querySelector('.popup__close-profile');
 const closePopupPlace = document.querySelector('.popup__close-place');
 
@@ -133,47 +132,58 @@ formPlace.addEventListener('submit', evt => {
 
 //##########################################################################################
 //Validación
-/* const formElement = document.querySelector('.form')
-const formInput = formElement.querySelector('.form__input')
-
-
 const showInputError = (formElement, inputElement, errorMessage) => {
-  const errorElement = formElement.querySelector(`.${formInput.id}-error`)
-  inputElement.classList.add('form__input_type_error');
-  errorElement.textContent = errorMessage;
+  const errorElement = formElement.querySelector(`.${inputElement.id}-error`)
+  inputElement.classList.add('from__input_type_error')
   errorElement.classList.add('form__input-error_active');
+  errorElement.textContent = errorMessage;
 }
-
 const hideInputError = (formElement, inputElement) => {
-  const errorElement = formElement.querySelector(`.${formInput.id}-error`);
-  inputElement.classList.remove('form__input_type_error');
+  const errorElement = formElement.querySelector(`.${inputElement.id}-error`)
+  inputElement.classList.remove('from__input_type_error')
   errorElement.classList.remove('form__input-error_active');
-  errorElement.textContent = '';
+  errorElement.textContent = "";
 }
-
-const inValid = () => {
-  if (!formInput.validity.valid) {
+const checkInputValdity = (formElement, inputElement) => {
+  if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage)
   } else {
     hideInputError(formElement, inputElement)
   }
 }
-
-const setEventListeners = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll('.form__input'))
-  inputList.forEach((inputElement) => inputElement.addEventListener('invalid', () => {
-    inValid(formElement, inputElement)
-  }))
-}
-
-const enableValidation = () => {
-  const formList = Array.from(document.querySelectorAll('.form'));
-  formList.forEach(formElement => {
-    formElement.addEventListener('submit', evt => {
-      evt.preventDefault()
+const setEventListener = (formElement) => {
+  const inputList = Array.from(formElement.querySelectorAll('.form__input'));
+  const buttonElement = formElement.querySelector('.form__submit');
+  toggleButtonState(inputList, buttonElement)
+  inputList.forEach(inputElement => {//Se genera el item de los inputs
+    inputElement.addEventListener('input', () => {
+      checkInputValdity(formElement, inputElement)
+      toggleButtonState(inputList, buttonElement)
     })
-    setEventListeners(formElement);
-
   })
 }
-enableValidation(); */
+const enableValidation = () => {
+  const formList = Array.from(document.querySelectorAll('.form'));
+  formList.forEach(formElement => {//Se genera el item formulario
+    formElement.addEventListener('submit', evt => {
+      evt.preventDefault();
+    })
+    setEventListener(formElement)
+  })
+}
+//Valida si algún input dentro de un formulario es inválido, devuelve como true
+const hasInvalidInput = (inputList) => {
+  return inputList.some((inputElement) => {
+    console.log(!inputElement.validity.valid)
+    return !inputElement.validity.valid;
+  })
+}
+
+const toggleButtonState = (inputList, buttonElement) => {
+  if (hasInvalidInput(inputList)) {
+    buttonElement.classList.add('form__submit-disabled')//Si hasInvalidInput devuelve true, agrega la clase que deshabilita al botón
+  } else {
+    buttonElement.classList.remove('form__submit-disabled')//Si hasInvalidInput devuelve false elimina la clase que lo inhabilita
+  }
+}
+enableValidation()

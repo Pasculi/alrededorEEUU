@@ -1,0 +1,6 @@
+.form__submit-disabled{
+  background: rgba(0,0,0,.0);
+  color:rgba(0,0,0,.2);
+  border: 1px solid rgba(0, 0, 0, .2);
+  pointer-events: none;
+}
